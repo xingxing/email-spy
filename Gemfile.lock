@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    email-spy (0.0.1)
+
 GEM
   remote: http://ruby.taobao.org/
   specs:
@@ -22,6 +27,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  email-spy!
   gdata_19
   gmail_contacts (~> 2.0)
   httpclient
