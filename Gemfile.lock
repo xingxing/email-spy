@@ -2,6 +2,7 @@ GEM
   remote: http://ruby.taobao.org/
   specs:
     diff-lcs (1.1.3)
+    gdata_19 (1.1.5)
     gmail_contacts (2.0)
       net-http-persistent (~> 1.2, > 1.2)
       nokogiri (~> 1.4)
@@ -21,6 +22,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  gdata_19
   gmail_contacts (~> 2.0)
   httpclient
   nokogiri (~> 1.5.0)
