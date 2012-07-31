@@ -1,5 +1,5 @@
 module EmailSpy
-  module Gmail
+  class Gmail
 
     Contacts_API_URL =  "http://www.google.com/m8/feeds/contacts/default/full"
 
