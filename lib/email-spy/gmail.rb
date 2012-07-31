@@ -6,11 +6,17 @@ module EmailSpy
     def self.fetch invitor_email_address,invitor_email_password
       client = GData::Client::Contacts.new
       client.clientlogin(invitor_email_address, invitor_email_password)
-      response = client.get(Contacts_API_URL).body
-      Nokogiri::XML(response).search("entry").map do |contact_info|
-        Contact.new(contact_info.search("title").first.text,
-                    contact_info.xpath("gd:email").attr("address").value)
-      end
+      response = client.get(Contacts_API_URL).to_xml
+      
+      response.elements.to_a('entry').map do |entry|
+        title, email = entry.elements['title'].text, nil
+        entry.elements.each('gd:email') do |e|
+          email = e.attribute('address').value if e.attribute('primary')
+        end
+        Contact.new(title,email) unless email.nil?
+      end.compact
+    rescue GData::Client::AuthorizationError => e
+      raise AuthenticationError, "Username or password are incorrect"
     end
   end
 end

@@ -5,6 +5,7 @@ require "gdata"
 
 require 'email-spy/contact'
 require 'email-spy/version'
+require 'email-spy/errors'
 require 'email-spy/gmail'
 
 module EmailSpy
