@@ -8,8 +8,10 @@ require "mechanize"
 require "csv"
 
 require 'email-spy/contact'
+require 'email-spy/email_types'
 require 'email-spy/version'
 require 'email-spy/errors'
+
 require 'email-spy/gmail'
 require "email-spy/hotmail"
 
@@ -20,6 +22,13 @@ module EmailSpy
   # @param [String] 邮件类型
   # @param [Array<EmailSay::Contact>] 联系人集合
   def self.fetch invitor_email_address,invitor_email_password,email_type
-    Gmail.fetch invitor_email_address,invitor_email_password
+    self.const_get(opreating_klass_name email_type).fetch invitor_email_address,invitor_email_password
+  end
+
+  private
+
+  def self.opreating_klass_name email_type
+    key = email_type.to_s.downcase
+    EMAIL_TYPE[key]
   end
 end

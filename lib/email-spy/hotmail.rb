@@ -19,9 +19,13 @@ module EmailSpy
       raise AuthorizationError if page.include? Login_Error_Message
       body = agent.get(Contacts_API_URL).body
       
-      # CSV.parse(body,headers: :first_row).map do |record|
-      #   Content.new("#{record['First Name']} #{record['Last Name']}",record['E-mail Address'])
-      # end
+      contacts = []
+
+      CSV.parse(body,headers: :first_row).each do |record|
+        contacts << Contact.new("#{record['First Name']} #{record['Last Name']}",record['E-mail Address'])
+      end
+      
+      contacts.compact
     end
   end
 end
