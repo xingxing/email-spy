@@ -28,4 +28,8 @@ module EmailSpy
       contacts.compact
     end
   end
+
+  private
+  
+  EMAIL_TYPE['hotmail'] = "Hotmail"
 end
