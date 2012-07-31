@@ -2,9 +2,9 @@ email-spy
 =========
 
 
-
+**Usage**
 ```ruby
-contacts = EmailSpy.fetch(account, password, type)
+contacts = EmailSpy.fetch(account, password, emailtype)
 contacts.each do |contact|
   puts "name: #{contact.name}, email: #{contact.email}"
 end
