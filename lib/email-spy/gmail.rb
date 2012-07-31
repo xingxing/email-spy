@@ -16,7 +16,7 @@ module EmailSpy
         Contact.new(title,email) unless email.nil?
       end.compact
     rescue GData::Client::AuthorizationError => e
-      raise AuthenticationError, "Username or password are incorrect"
+      raise AuthenticationError
     end
   end
 end

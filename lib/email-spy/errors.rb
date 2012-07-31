@@ -3,6 +3,9 @@ module EmailSpy
   end
 
   class AuthenticationError < EmailSayError
+    def initialize(msg = "Email address or password are incorrect")
+      super(msg)
+    end
   end
 
   class ConnectionError < EmailSayError

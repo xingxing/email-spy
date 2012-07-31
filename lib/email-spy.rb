@@ -2,12 +2,16 @@
 require 'rubygems'
 require 'bundler/setup'
 require "nokogiri"
-require "gdata"
+require 'gdata'
+
+require "mechanize"
+require "csv"
 
 require 'email-spy/contact'
 require 'email-spy/version'
 require 'email-spy/errors'
 require 'email-spy/gmail'
+require "email-spy/hotmail"
 
 module EmailSpy
   # 获取 联系人集合
