@@ -7,7 +7,7 @@ module EmailSpy
     # 用户名密码错误提示
     Login_Error_Message = "That password is incorrect. Be sure you're using the password for your Microsoft account."
 
-    Contacts_API_URL = "http://co108w.col108.mail.live.com/mail/GetContacts.aspx"
+    Contacts_URL = "http://co108w.col108.mail.live.com/mail/GetContacts.aspx"
 
     def self.fetch invitor_email_address,invitor_email_password
       agent = Mechanize.new
@@ -17,7 +17,7 @@ module EmailSpy
       login_form.login ,login_form.passwd = invitor_email_address,invitor_email_password
       page = login_form.submit
       raise AuthorizationError if page.body.include? Login_Error_Message
-      body = agent.get(Contacts_API_URL).body
+      body = agent.get(Contacts_URL).body
       
       contacts = []
 
