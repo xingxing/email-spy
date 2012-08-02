@@ -15,6 +15,7 @@ require 'email-spy/errors'
 
 require 'email-spy/gmail'
 require "email-spy/hotmail"
+require "email-spy/126"
 
 module EmailSpy
   # 获取 联系人集合
