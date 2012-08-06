@@ -16,7 +16,7 @@ module EmailSpy
       login_form = page.forms[0]
       login_form.login ,login_form.passwd = invitor_email_address,invitor_email_password
       page = login_form.submit
-      raise AuthorizationError if page.body.include? Login_Error_Message
+      raise AuthenticationError if page.body.include? Login_Error_Message
       body = agent.get(Contacts_URL).body
       
       contacts = []
