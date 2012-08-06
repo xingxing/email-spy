@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    email-spy (0.0.2)
+    email-spy (0.0.3)
       gdata_19 (~> 1.1.5)
       httpclient (~> 2.2.5)
       mechanize (~> 2.5.1)
