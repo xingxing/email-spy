@@ -7,6 +7,7 @@ require 'gdata'
 require 'iconv'
 require "mechanize"
 require "csv"
+require "json"
 
 require 'email-spy/contact'
 require 'email-spy/email_types'
@@ -16,6 +17,7 @@ require 'email-spy/errors'
 require 'email-spy/gmail'
 require "email-spy/hotmail"
 require "email-spy/126"
+require "email-spy/yahoo"
 
 module EmailSpy
   # 获取 联系人集合
