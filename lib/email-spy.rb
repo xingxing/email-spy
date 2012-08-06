@@ -24,7 +24,7 @@ module EmailSpy
   # @param [String] 邀请人电邮地址
   # @param [String] 邀请人电邮密码
   # @param [String] 邮件类型
-  # @param [Array<EmailSay::Contact>] 联系人集合
+  # @return [Array<EmailSay::Contact>] 联系人集合
   def self.fetch invitor_email_address,invitor_email_password,email_type
     self.const_get(operating_klass_name email_type).fetch invitor_email_address,invitor_email_password
   end
