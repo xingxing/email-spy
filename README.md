@@ -1,7 +1,6 @@
 email-spy
 =========
 
-
 Usage
 -----
 
@@ -29,7 +28,9 @@ Encoding
 我们推荐 rCharDet19(https://github.com/oleander/rchardet) 来帮助你解决编码的问题:
 
 ```ruby
-  EmailSpy.fetch(account,password,emailtype).map{|c| c.name.encode('utf-8',CharDet.detect(c.name).encoding) }
+EmailSpy.fetch(account,password,emailtype).map do |c| 
+ c.name.encode('utf-8',CharDet.detect(c.name).encoding)
+end
 ```
 
 Change Log
