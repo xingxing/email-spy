@@ -19,3 +19,15 @@ Current Supported Email Type
 + hotmail
 + 126
 + yahoo
+
+
+Encoding
+--------
+
+我们尚未对联系人姓名编码进行什么处理,应为我们觉得这会使Email Spy不够纯粹:它只返回web server响应的内容。也许之后会支持?:alien:
+
+
+Change Log
+----------
+
++ 0.0.3 first release
