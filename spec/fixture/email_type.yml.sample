@@ -1,0 +1,13 @@
+# 文件名约定为EMAIL_TYPE的key.yml
+
+# 目标邮箱的 地址和密码
+invitor email: email-address@domain.com
+invitor password: password
+
+# 联系人中的一个
+contact:
+  name: contact name
+  email: contact-address@domain.com
+
+# 联系人总数
+contacts count: N

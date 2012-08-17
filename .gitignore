@@ -18,4 +18,4 @@ _yardoc
 doc/
 
 # 测试数据
-spec/fixture
+spec/fixture/*.yml
