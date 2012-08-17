@@ -4,7 +4,7 @@ require File.expand_path('../lib/email-spy/version', __FILE__)
 Gem::Specification.new do |s|
   s.name        = 'email-spy'
   s.version     = EmailSpy::VERSION
-  s.date        = '2012-07-30'
+  s.date        = '2012-08-17'
   s.summary     = ""
   s.description = "Retrieves contact list of email"
   s.authors     = ["Wade Xing"]
