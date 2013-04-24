@@ -4,7 +4,6 @@ require 'bundler/setup'
 require "nokogiri"
 require 'gdata'
 
-require 'iconv'
 require "mechanize"
 require "csv"
 require "json"
