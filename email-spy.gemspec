@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/xingxing/email-spy'
 
   s.add_runtime_dependency "httpclient", "~> 2.2.5"
-  s.add_runtime_dependency 'nokogiri', "~> 1.5.0"
+  s.add_runtime_dependency 'nokogiri', "~> 1.6.0"
   s.add_runtime_dependency 'gdata_19', "~> 1.1.5"
   s.add_runtime_dependency 'mechanize', "~> 2.5.1"
 
